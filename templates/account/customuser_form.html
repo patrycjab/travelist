@@ -1,0 +1,5 @@
+<form method="post">{% csrf_token %}
+    If you want add another sources type click here <a href="{% if user_id %}{% url 'add-sources' user_id=user_id %}{% endif %}" class="btn btn-success">Click here</a>
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+</form>
